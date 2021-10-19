@@ -38,17 +38,17 @@ require '../vendor/autoload.php';
         $mail->SMTPDebug = 0;                                     
         $mail->Host       = 'smtp.gmail.com;';                     
         $mail->SMTPAuth   = true;                              
-        $mail->Username   = 'mobilebunk.services@gmail.com';                  
-        $mail->Password   = 'Mobilebunk@123';                                                        
+        $mail->Username   = 'mobilebunkmail@gmail.com';                  
+        $mail->Password   = 'password';                                                        
         $mail->Port       = 587;
         $mail->SMTPSecure = 'tls';
         $mail->wordwrap=50;      
         $mail->Subject = 'Application Acceptance'; 
         $mail->Body    = '<p style="font-size:1.5rem">Hello '.$firstname.'  '.$lastname.',</p><p style="font-size:1.2rem">You have been selected. We will contact you soon with more details.</p>'; 
         $mail->AltBody = 'Hello '.$firstname.'  '.$lastname.', You have been selected. We will contact you soon with more details.'; 
-        $mail->setFrom('mobilebunk.services@gmail.com','Mobile Bunk & Services');            
+        $mail->setFrom('mobilebunkmail@gmail.com','Mobile Bunk & Services');            
         $mail->addAddress($email,$firstname); 
-        $mail->addReplyTo('mobilebunk.services@gmail.com');
+        $mail->addReplyTo('mobilebunkmail@gmail.com');
         $mail->isHTML(true);                                
         if($mail->send())
         {
