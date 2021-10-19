@@ -44,7 +44,7 @@ require 'vendor/autoload.php';
             $mail->SMTPDebug = 0;                                     
             $mail->Host       = 'smtp.gmail.com;';                     
             $mail->SMTPAuth   = true;                              
-            $mail->Username   = 'mobilebunk.services@gmail.com';                  
+            $mail->Username   = 'mobilebunkmail@gmail.com';                  
             $mail->Password   = 'password';                                                        
             $mail->Port       = 587;
             $mail->SMTPSecure = 'tls';
@@ -52,9 +52,9 @@ require 'vendor/autoload.php';
             $mail->Subject = 'Application for employee at Mobile Bunk & Services'; 
             $mail->Body    = '<p style="font-size:1.5rem">Hello '.$firstname.'  '.$lastname.',</p><p style="font-size:1.2rem">Your application has been received by us. Stay tuned for futher instructions.</p>'; 
             $mail->AltBody = 'Hello '.$firstname.'  '.$lastname.', Your application has been received by us. Stay tuned for futher instructions.'; 
-            $mail->setFrom('mobilebunk.services@gmail.com','Mobile Bunk & Services');            
+            $mail->setFrom('mobilebunkmail@gmail.com','Mobile Bunk & Services');            
             $mail->addAddress($email,$firstname); 
-            $mail->addReplyTo('mobilebunk.services@gmail.com');
+            $mail->addReplyTo('mobilebunkmail@gmail.com');
             $mail->isHTML(true);                                
             if($mail->send())
             {
