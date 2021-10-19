@@ -45,7 +45,7 @@ require 'vendor/autoload.php';
             $mail->Host       = 'smtp.gmail.com;';                     
             $mail->SMTPAuth   = true;                              
             $mail->Username   = 'mobilebunk.services@gmail.com';                  
-            $mail->Password   = 'Mobilebunk@123';                                                        
+            $mail->Password   = 'password';                                                        
             $mail->Port       = 587;
             $mail->SMTPSecure = 'tls';
             $mail->wordwrap=50;      
